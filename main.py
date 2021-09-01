@@ -6,7 +6,7 @@ import string
 from bs4 import BeautifulSoup
 
 
-def save_article(page: str, type: str) -> None:
+def save_article(page: str, article_type: str) -> None:
     for page_num in range(1, int(page) + 1):
         # create directory
         if not os.path.exists(f'Page_{str(page_num)}'):
@@ -34,5 +34,5 @@ def save_article(page: str, type: str) -> None:
 
 if __name__ == '__main__':
     page_count: str = input()
-    type: str = input()
-    save_article(type=type, page=page_count)
+    article_type: str = input()
+    save_article(article_type=article_type, page=page_count)
